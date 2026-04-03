@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atharva Veda vs Constitution</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Comparative Civic Intelligence</p>
+        <h1>Atharva Veda vs Indian Constitution</h1>
+        <p class="hero-copy">
+          Compare an Atharva Vedic principle with a constitutional article and
+          get a structured explanation of shared themes, practical meaning, and
+          modern application.
+        </p>
+      </header>
+
+      <main class="layout">
+        <section class="panel input-panel">
+          <div class="panel-head">
+            <h2>Inputs</h2>
+            <div class="sample-row">
+              <button class="ghost-button sample-button" data-sample="equality" type="button">
+                Load Equality Example
+              </button>
+              <button class="ghost-button sample-button" data-sample="harmony" type="button">
+                Load Harmony Example
+              </button>
+            </div>
+          </div>
+
+          <form id="comparison-form">
+            <label class="field">
+              <span>Vedic Principle or Verse</span>
+              <textarea
+                id="vedic_principle"
+                name="vedic_principle"
+                rows="6"
+                placeholder="Example: Dharma as justice and moral duty, or an Atharva Veda verse with its meaning."
+                required
+              ></textarea>
+            </label>
+
+            <label class="field">
+              <span>Constitutional Law or Article</span>
+              <textarea
+                id="constitutional_article"
+                name="constitutional_article"
+                rows="5"
+                placeholder="Example: Article 14, equality before law and equal protection of laws."
+                required
+              ></textarea>
+            </label>
+
+            <div class="settings-grid">
+              <label class="field compact-field">
+                <span>Model</span>
+                <select id="model" name="model">
+                  <option value="gemini-2.5-flash">gemini-2.5-flash</option>
+                  <option value="gemini-2.5-pro">gemini-2.5-pro</option>
+                  <option value="gpt-5.4-mini">gpt-5.4-mini</option>
+                  <option value="gpt-5.4">gpt-5.4</option>
+                </select>
+              </label>
+
+              <label class="field compact-field">
+                <span>Reasoning</span>
+                <select id="reasoning_effort" name="reasoning_effort">
+                  <option value="low">low</option>
+                  <option value="medium">medium</option>
+                  <option value="high">high</option>
+                </select>
+              </label>
+            </div>
+
+            <button id="submit-button" class="primary-button" type="submit">
+              Analyze Similarity
+            </button>
+          </form>
+
+          <p class="hint">
+            The app uses structured AI output and accepts
+            <code>GOOGLE_API_KEY</code>, <code>GEMINI_API_KEY</code>, or
+            <code>OPENAI_API_KEY</code> in the Python server environment.
+          </p>
+        </section>
+
+        <section class="panel output-panel">
+          <div class="panel-head">
+            <h2>Analysis</h2>
+            <p id="status" class="status">
+              Results will appear here in the required project format.
+            </p>
+          </div>
+
+          <div id="result" class="result empty-state">
+            <p class="empty-title">No analysis yet</p>
+            <p class="empty-copy">
+              Submit a Vedic principle and a constitutional article to generate
+              a comparison.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
