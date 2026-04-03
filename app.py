@@ -101,7 +101,7 @@ class AppHandler(SimpleHTTPRequestHandler):
 
 
 def run() -> None:
-    port = int(os.environ.get("PORT", "8000"))
+    port = int(os.environ.get("PORT", "8010"))
     handler = partial(AppHandler, directory=str(STATIC_DIR))
     server = ThreadingHTTPServer(("127.0.0.1", port), handler)
     print(f"Atharva Constitution app running at http://127.0.0.1:{port}")
