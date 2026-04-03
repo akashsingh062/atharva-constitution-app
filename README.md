@@ -51,10 +51,10 @@ python3 app.py
 Then open:
 
 ```text
-http://127.0.0.1:8000
+http://127.0.0.1:8010
 ```
 
-If port `8000` is busy, run on another port:
+If port `8010` is busy, run on another port:
 
 ```bash
 PORT=8010 python3 app.py
